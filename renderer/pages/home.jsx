@@ -9,9 +9,16 @@ const Home = () => {
   const [loaded, setLoaded] = useState(false);
   const [status, setStatus] = useState("");
   const [exist, setExist] = useState("");
+
+  function reset() {
+    setLoading(false);
+    setLoaded(false);
+    setStatus("false");
+    setExist("");
+  }
+
   function fetchvpro() {
     setLoading(true);
-    console.log("Hello");
     var options = {
       name: "Electron",
       icns: "/Applications/Electron.app/Contents/Resources/Electron.icns", // (optional)
@@ -37,10 +44,6 @@ const Home = () => {
       }
       setLoading(false);
       setLoaded(true);
-      // console.log(
-      //   "stdout: " +
-      //     xmlDoc.getElementsByTagName("Solution")[0].getAttribute("name")
-      // );
     });
   }
 
@@ -48,13 +51,29 @@ const Home = () => {
     <>
       <Head>
         <title>GCA Intel vPro Detector</title>
+        <link
+          rel="shortcut icon"
+          href="./images/GCA.png"
+          type="image/x-icon"
+        ></link>
       </Head>
       <div>
         <h1 className="p-8 text-4xl text-center">GCA Intel vPro Detector</h1>
         <div className="flex justify-center">
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid grid-cols-3">
             <div>
               <img className="h-40" src="/images/Intel.svg" />
+            </div>
+            <div className="flex items-center justify-center">
+              <svg
+                fill="none"
+                stroke-width="1"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-20"
+              >
+                <path d="M12 4v16m8-8H4"></path>
+              </svg>
             </div>
             <div>
               <img className="h-40" src="/images/GCA.png" />
@@ -72,10 +91,22 @@ const Home = () => {
           )}
           {loading && !loaded && <p>Loading</p>}
           {loaded && (
-            <ul>
-              <li>State: {status}</li>
-              <li>Exist: {exist}</li>
-            </ul>
+            <div className="flex flex-col">
+              <ul className="text-xl">
+                <li>
+                  State: <span className="font-semibold">{status}</span>
+                </li>
+                <li>
+                  Exist: <span className="font-semibold">{exist}</span>
+                </li>
+              </ul>
+              <button
+                className="px-2 py-2 mt-4 font-semibold border border-red-600 rounded hover:bg-red-400 "
+                onClick={reset}
+              >
+                Reset
+              </button>
+            </div>
           )}
         </div>
       </div>
