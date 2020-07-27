@@ -58,7 +58,9 @@ const Home = () => {
         ></link>
       </Head>
       <div>
-        <h1 className="p-8 text-4xl text-center">GCA Intel vPro Detector</h1>
+        <h1 className="p-8 text-4xl font-semibold text-center">
+          GCA Intel vPro Detector
+        </h1>
         <div className="flex justify-center">
           <div className="grid grid-cols-3">
             <div>
@@ -86,22 +88,32 @@ const Home = () => {
               className="px-6 py-4 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded hover:bg-blue-500 hover:text-white hover:border-transparent"
               onClick={fetchvpro}
             >
-              Get Started
+              Run Test
             </button>
           )}
-          {loading && !loaded && <p>Loading</p>}
+          {loading && !loaded && <div class="lds-dual-ring"></div>}
           {loaded && (
-            <div className="flex flex-col">
-              <ul className="text-xl">
-                <li>
-                  State: <span className="font-semibold">{status}</span>
-                </li>
-                <li>
-                  Exist: <span className="font-semibold">{exist}</span>
-                </li>
-              </ul>
+            <div className="flex flex-col items-center">
+              <table class="table-auto text-lg">
+                <thead>
+                  <tr>
+                    <th class="px-4 py-2">Property</th>
+                    <th class="px-4 py-2">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border px-4 py-2">exist</td>
+                    <td class="border px-4 py-2">{exist}</td>
+                  </tr>
+                  <tr>
+                    <td class="border px-4 py-2">state</td>
+                    <td class="border px-4 py-2">{status}</td>
+                  </tr>
+                </tbody>
+              </table>
               <button
-                className="px-2 py-2 mt-4 font-semibold border border-red-600 rounded hover:bg-red-400 "
+                className="w-24 py-2 mt-12 font-semibold border border-red-600 rounded hover:bg-red-400 "
                 onClick={reset}
               >
                 Reset
