@@ -9,6 +9,9 @@ files:
     filter:
       - package.json
       - app
+win:
+  target:
+    - "portable"
 extraFiles:
   - PlatformDiscovery.exe
 publish: null
