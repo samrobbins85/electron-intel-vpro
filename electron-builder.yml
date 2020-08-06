@@ -12,6 +12,8 @@ files:
 win:
   target:
     - "portable"
+  publish:
+    - github
 extraFiles:
   - PlatformDiscovery.exe
 publish: null
