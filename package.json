@@ -11,9 +11,7 @@
   },
   "scripts": {
     "dev": "nextron",
-    "build": "nextron build",
-    "postinstall": "electron-builder install-app-deps",
-    "release": "build"
+    "build": "nextron build"
   },
   "dependencies": {
     "electron-serve": "^1.0.0",
