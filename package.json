@@ -1,7 +1,7 @@
 {
   "name": "intel-vpro-detector",
   "description": "An application to detect Intel vPro",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Sam Robbins",
   "main": "app/background.js",
   "repository": {
