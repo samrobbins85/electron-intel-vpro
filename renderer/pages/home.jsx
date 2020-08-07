@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
+import Router from "next/router";
 import { useState } from "react";
 var sudo = require("sudo-prompt");
 
@@ -38,10 +38,18 @@ const Home = () => {
         if (xmlDoc[i].getAttribute("name") === "Intel(R) AMT") {
           setStatus(xmlDoc[i].getAttribute("state"));
           setExist(xmlDoc[i].getAttribute("exist"));
+          if (
+            xmlDoc[i].getAttribute("exist") === "false" &&
+            xmlDoc[i].getAttribute("state") === "not supported"
+          ) {
+            Router.push("./double_none");
+          }
           console.log(xmlDoc[i].getAttribute("state"));
           console.log(xmlDoc[i].getAttribute("exist"));
         }
       }
+      // Here it knows the two values
+
       setLoading(false);
       setLoaded(true);
     });
@@ -69,7 +77,7 @@ const Home = () => {
             <div className="flex items-center justify-center">
               <svg
                 fill="none"
-                stroke-width="1"
+                strokeWidth="1"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 className="h-20"
