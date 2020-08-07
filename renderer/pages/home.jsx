@@ -36,20 +36,15 @@ const Home = () => {
       var i;
       for (i = 0; i < xmlDoc.length; i++) {
         if (xmlDoc[i].getAttribute("name") === "Intel(R) AMT") {
-          setStatus(xmlDoc[i].getAttribute("state"));
-          setExist(xmlDoc[i].getAttribute("exist"));
-          if (
-            xmlDoc[i].getAttribute("exist") === "false" &&
-            xmlDoc[i].getAttribute("state") === "not supported"
-          ) {
+          const valStatus = xmlDoc[i].getAttribute("state");
+          const valExist = xmlDoc[i].getAttribute("exist");
+          if (valExist === "false" && valStatus === "not supported") {
             Router.push("./double_none");
           }
-          console.log(xmlDoc[i].getAttribute("state"));
-          console.log(xmlDoc[i].getAttribute("exist"));
+          setStatus(valStatus);
+          setExist(valExist);
         }
       }
-      // Here it knows the two values
-
       setLoading(false);
       setLoaded(true);
     });
@@ -66,9 +61,9 @@ const Home = () => {
         ></link>
       </Head>
       <div>
-        <h1 className="p-8 text-4xl font-semibold text-center">
+        <h2 className="p-8 text-4xl font-semibold text-center">
           GCA Intel vPro Detector
-        </h1>
+        </h2>
         <div className="flex justify-center">
           <div className="grid grid-cols-3">
             <div>
