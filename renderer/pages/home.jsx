@@ -41,6 +41,9 @@ const Home = () => {
           if (valExist === "false" && valStatus === "not supported") {
             Router.push("./double_none");
           }
+          if (valExist === "true" && valStatus === "configured") {
+            Router.push("./all_set");
+          }
           setStatus(valStatus);
           setExist(valExist);
         }
