@@ -20,7 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "babel-loader": "^8.1.0",
-    "electron": "^9.2.1",
+    "electron": "^10.0.0",
     "electron-builder": "^22.8.0",
     "next": "9.5.2",
     "nextron": "^5.15.0",
