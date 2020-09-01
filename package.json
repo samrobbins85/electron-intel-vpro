@@ -18,16 +18,16 @@
     "sudo-prompt": "^9.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.11.5",
     "babel-loader": "^8.1.0",
-    "electron": "^9.2.0",
+    "electron": "^10.1.0",
     "electron-builder": "^22.8.0",
-    "next": "9.5.1",
+    "next": "9.5.2",
     "nextron": "^5.15.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tailwindcss": "^1.6.2",
+    "tailwindcss": "^1.7.6",
     "webpack": "^4.44.1"
   }
 }
