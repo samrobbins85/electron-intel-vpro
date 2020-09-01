@@ -67,27 +67,10 @@ const Home = () => {
         <h2 className="p-8 text-4xl font-semibold text-center">
           GCA Intel vPro Detector
         </h2>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-3">
-            <div>
-              <img className="h-40" src="/images/Intel.svg" />
-            </div>
-            <div className="flex items-center justify-center">
-              <svg
-                fill="none"
-                strokeWidth="1"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-20"
-              >
-                <path d="M12 4v16m8-8H4"></path>
-              </svg>
-            </div>
-            <div>
-              <img className="h-40" src="/images/GCA.png" />
-            </div>
-          </div>
-        </div>
+        <h3 className="text-center">
+          Detect the presence of Intel vPro and the status of Intel AMT in your
+          computer
+        </h3>
         <div className="flex justify-center pt-8">
           {!loading && !loaded && (
             <button
