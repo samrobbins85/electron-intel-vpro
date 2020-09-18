@@ -28,6 +28,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tailwindcss": "^1.8.10",
-    "webpack": "^4.44.1"
+    "webpack": "^4.44.2"
   }
 }
