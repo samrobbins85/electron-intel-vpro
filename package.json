@@ -23,7 +23,7 @@
     "electron": "^10.1.2",
     "electron-builder": "^22.8.1",
     "next": "9.5.3",
-    "nextron": "^5.15.1",
+    "nextron": "^5.15.2",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
