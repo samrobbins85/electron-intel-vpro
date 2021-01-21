@@ -13,7 +13,7 @@
     "build": "nextron build"
   },
   "dependencies": {
-    "electron-serve": "^1.0.0",
+    "electron-serve": "^1.1.0",
     "electron-store": "^6.0.1",
     "sudo-prompt": "^9.2.1"
   },
